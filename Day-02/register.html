@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register for DevConf 2026</title>
+</head>
+<body>
+
+<header>
+  <h1>Register for DevConf 2026</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a> |
+  <a href="register.html">Register</a>
+</nav>
+
+<main>
+
+<form action="submit.php" method="post">
+
+  <!-- Personal Info -->
+  <fieldset>
+    <legend>Personal Information</legend>
+
+    <label>First Name:
+      <input type="text" required placeholder="First Name">
+    </label><br>
+
+    <label>Last Name:
+      <input type="text" required placeholder="Last Name">
+    </label><br>
+
+    <label>Email:
+      <input type="email" required placeholder="email@example.com">
+    </label><br>
+
+    <label>Phone:
+      <input type="tel" placeholder="Phone Number">
+    </label><br>
+
+    <label>Date of Birth:
+      <input type="date">
+    </label>
+  </fieldset>
+
+  <!-- Professional -->
+  <fieldset>
+    <legend>Professional Details</legend>
+
+    <input type="text" placeholder="Job Title"><br>
+    <input type="text" placeholder="Company"><br>
+    <input type="number" min="0" max="50" placeholder="Years of Experience"><br>
+
+    <select>
+      <optgroup label="Tech">
+        <option>Software</option>
+        <option>AI</option>
+      </optgroup>
+      <optgroup label="Healthcare">
+        <option>Medical IT</option>
+      </optgroup>
+    </select>
+  </fieldset>
+
+  <!-- Preferences -->
+  <fieldset>
+    <legend>Conference Preferences</legend>
+
+    <input type="radio" name="type"> In-Person
+    <input type="radio" name="type"> Virtual
+    <input type="radio" name="type"> Hybrid<br>
+
+    <input type="checkbox"> AI Workshop
+    <input type="checkbox"> Cloud Workshop
+    <input type="checkbox"> Web Workshop
+    <input type="checkbox"> Security Workshop
+    <input type="checkbox"> DevOps Workshop<br>
+
+    <select>
+      <option>XS</option><option>S</option><option>M</option>
+      <option>L</option><option>XL</option><option>XXL</option>
+    </select><br>
+
+    <textarea maxlength="500" placeholder="Dietary requirements"></textarea>
+  </fieldset>
+
+  <!-- Additional -->
+  <fieldset>
+    <legend>Additional Information</legend>
+    <textarea placeholder="Special accommodations"></textarea><br>
+    <select>
+      <option>Social Media</option>
+      <option>Friends</option>
+      <option>Ads</option>
+    </select><br>
+    <input type="file" accept=".pdf">
+  </fieldset>
+
+  <label>
+    <input type="checkbox" required> I agree to Terms
+  </label><br>
+
+  <label>
+    <input type="checkbox"> Subscribe to newsletter
+  </label><br>
+
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+
+</form>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 DevConf India.</p>
+</footer>
+
+</body>
+</html>
