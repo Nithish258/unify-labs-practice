@@ -1,0 +1,171 @@
+/* =====================
+   ROOT & RESET
+===================== */
+:root {
+  --bg1: #c7d2fe;
+  --bg2: #93c5fd;
+  --primary: #6366f1;
+  --card: rgba(255,255,255,0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+}
+
+/* =====================
+   REDUCED MOTION
+===================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* =====================
+   LAYOUT
+===================== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  display: grid;
+  gap: 40px;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  text-align: center;
+  animation: fadeUp 1s ease;
+}
+
+.rocket {
+  font-size: 48px;
+  animation: float 2s ease-in-out infinite;
+}
+
+.hero h1 {
+  margin: 10px 0;
+}
+
+.hero p {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+/* =====================
+   BUTTON (OOCSS)
+===================== */
+.btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* =====================
+   GRID & CARDS
+===================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--card);
+  padding: 40px;
+  text-align: center;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Focus interaction */
+.focus-card:focus {
+  outline: 3px solid var(--primary);
+  transform: scale(1.05);
+}
+
+/* =====================
+   IMAGE CARD
+===================== */
+.image-card {
+  display: flex;
+  justify-content: center;
+}
+
+.img-box {
+  width: 300px;
+  height: 180px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.img-box:hover {
+  transform: scale(1.08);
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}
